@@ -1,0 +1,42 @@
+### Dicas Rapidas
+
+1 - execute yarn init -y
+
+2 - yarn add express (framework Express - define rotas por exemplo)
+
+3 - yarn add nodemon -D (D serve para informar que essa dependencia só rodara no ambiente de dev)
+
+4 - Incluir 
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+
+  no package.json para que o servidor sempre escute uma alteração
+
+5 - Para subir a aplicação 
+yarn dev
+
+Dicas serviço parecido com Postman
+INSOmnia.rest
+
+6 - Separar os arquivos de rotas por arquivos para nao ficar gigante
+
+7- Conectar aplicação com bando de dados
+Install mongoDB direto do site (hospedagem gratis até 500mb)
+
+
+8 - instalar dependencia  
+yarn add mongoose (facilita trabalhar com o mongoDB)
+
+url banco: mongodb+srv://omnistack:<password>@omnistack-xiuxl.mongodb.net/test?retryWrites=true&w=majority
+
+9 - Utilizando parttners MVC:
+model - representa uma tabela no banco de dados / schema
+controller - onde fica as regras de negocios da aplicação 
+
+10 - Instalar lib que tratar req de multi form data (upload de imagens)
+
+yarn add multer 
+
+11 - 
+
