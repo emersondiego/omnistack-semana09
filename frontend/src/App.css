@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap'); /* importando fornte do Roboto */
+
+/* reseta o css, limpa algumas estilizações  */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+} 
+
+html, body, #root {
+  min-height: 100%; /* faz com que o fundo da aplicação ocupe o fundo todo */
+}
+
+body {
+  background: #000 url('./assets/background.jpg');  /* informa um fundo preto e incluimos imagem*/
+
+  background-size: cover; /* que a imagem cubra toda a tela */ 
+
+  -webkit-font-smoothing: antialiased !important; /* qdeixa a fonte mais detalhada */ 
+}
+
+body, input, button { /* incorporar a fonte roboto nesses elementos   */
+  
+  font-family: 'Roboto', Arial, Helvetica, sans-serif; /* se não achar a robot ele tenta as seguintes da lista */
+  
+  font-size: 14px;
+}
+
+
+.container {
+  margin: 80px auto 0;   /*alinha tudo no centro da tela*/
+  max-width: 450px;    /* largura maxima  */ 
+  width: 100%;        /* largura maxima para o responsivo  */ 
+  display: flex;          /* 3 prox faz com que a logo os proximos itens fiquem embaixo de cada e centralizados    */ 
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {            /* configura todos elementos dentro do content*/
+  width: 100%;
+  background: #fff;
+  margin-top: 50px;
+  border-radius: 4px;
+  padding: 30px;
+}
+
+.content > p {      /* estilizar o primeiro p que vm dentro do content*/
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+.content form { /* estilizar form dentro do content*/
+  display: flex;
+  flex-direction: column;   /* manter a label ipunt e botao um abaixo do outro*/
+}
+
+.content form label {   /* estilizar a label */
+  font-size: 14px;
+  color: #444 ;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.content form input { /* estilizar a input */
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  height: 45px;
+  padding: 0 15px;
+  font-size: 16px;
+}
+
+.content button.btn { /* estilizar a botao */
+  border: 0;
+  border-radius: 2px;
+  width: 100%;
+  height: 42px;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #f05a5b;
+  color: #fff;
+  cursor: pointer;
+}
+
+.content button.btn:hover { /* mudar a cor do botao assim que passar o mouse */ 
+   background: #e14f50;
+}
