@@ -28,7 +28,7 @@ Install mongoDB direto do site (hospedagem gratis até 500mb)
 8 - instalar dependencia  
 yarn add mongoose (facilita trabalhar com o mongoDB)
 
-url banco: mongodb+srv://omnistack:<password>@omnistack-xiuxl.mongodb.net/test?retryWrites=true&w=majority
+url banco: mongodb+srv://<user>:<password>@omnistack-xiuxl.mongodb.net/test?retryWrites=true&w=majority
 
 9 - Utilizando parttners MVC:
 model - representa uma tabela no banco de dados / schema
@@ -37,6 +37,3 @@ controller - onde fica as regras de negocios da aplicação
 10 - Instalar lib que tratar req de multi form data (upload de imagens)
 
 yarn add multer 
-
-11 - 
-
