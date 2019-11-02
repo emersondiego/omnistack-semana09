@@ -36,3 +36,8 @@ Conf VS Code
 
 yarn add axios
 
+4 - Criar sistemas de rotas 
+
+Instalar
+yarn add react-router-dom
+Biblioteca de rotas mais famosas do react
