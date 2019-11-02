@@ -44,3 +44,5 @@ yarn add multer
 yarn add cors 
 
 controla permissoes de acesso ao nosso backend
+
+12 - Alteração backend para ter acesso as imagens
