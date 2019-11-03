@@ -63,6 +63,12 @@ body, input, button { /* incorporar a fonte roboto nesses elementos   */
   margin-bottom: 8px;
 }
 
+.content form label span {   /* estilizar a label span */
+  font-weight: normal;
+  color: #999;
+  font-size: 12px;
+}
+
 .content form input { /* estilizar a input */
   margin-bottom: 20px;
   border: 1px solid #ddd;
