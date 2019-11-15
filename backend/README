@@ -46,3 +46,33 @@ yarn add cors
 controla permissoes de acesso ao nosso backend
 
 12 - Alteração backend para ter acesso as imagens
+
+=== 
+ReactNative
+
+- Gera interface nativa, sendo utilzado js, le codigo js e converte de forma nativa
+- ponte entre o codigo nativo e o ReactNative
+
+Ferramentas:
+- Expo: acelara o desenvolmento da aplicação, pelo menos forma inicial.
+- 
+
+13 - Intalar de forma global biblioteca expo
+
+npm install -g expo-cli 
+
+Dica: talvez seja necessário executar comando: sudo chown -R $USER /usr/lib/node_modules
+
+14 - Inicial um projeto em expo
+
+expo init mobile
+
+Criar em blank 
+
+15 - Acessar pasta criada e executar comando:
+
+yarn start
+
+16 - Emulador de Android
+
+Genymotion fun zone
