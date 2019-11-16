@@ -26,3 +26,8 @@ expo install react-native-gesture-handler react-native-reanimated
 2 - Add axios para fazer comunicação com a api
 
 yarn add axios 
+
+Dica
+Dentro do cloud.mongodb
+
+Baixar o mongo compass para acompnhar a base de dados
