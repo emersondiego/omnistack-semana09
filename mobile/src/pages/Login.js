@@ -1,10 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { View, AsyncStorage, KeyboardAvoidingView, Platform, Image, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 
-import { View, KeyboardAvoidingView, Platform, Image, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import api from '../services/api';
 
 import logo from '../assets/logo.png';
 
-export default function Login() {
+export default function Login( { navigation } ) {
+  const [email, setEmail] = useState('');
+  const [techs, setTechs] = useState('');
+
+  useEffect(() =>{
+    // guarda sessao e nao faz com que user saia da rota 
+    AsyncStorage.getItem('use').then(user => {
+      if (user) {
+        navigation.navigate('List');
+      }
+    })
+  }, []);
+
+  async function handleSubmit() {
+    const response = await api.post('/sessions', {
+      email
+    })
+
+    const { _id } = response.data; 
+    // AsyncStorage: armazena no BD do navegador o id do user
+    await AsyncStorage.setItem('user', _id);
+    await AsyncStorage.setItem('techs', techs);
+
+    navigation.navigate('List');
+  }
+  
   return ( 
     <KeyboardAvoidingView enabled={Platform.OS == 'ios'} behavior="padding" style={styles.container}>
       <Image source={logo}/>
@@ -17,6 +43,8 @@ export default function Login() {
           keyboardType='email-address'
           autoCapitalize="none"
           autoCorrect={false}
+          value={email}
+          onChangeText={setEmail}
         />
 
         <Text style={styles.label}>TECNOLOGIAS *</Text>
@@ -26,9 +54,11 @@ export default function Login() {
           placeholderTextColor="#999"
           autoCapitalize="words"
           autoCorrect={false}
+          value={techs}
+          onChangeText={setTechs}
         />
 
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity onPress={handleSubmit} style={styles.button}> 
           {/*Cada estilização é propria*/}
           <Text style={styles.buttonText}>Encontrar spots</Text> 
         </TouchableOpacity>

@@ -21,3 +21,8 @@ Necessário instalar: yarn add react-navigation - biblioteca mais utilizada para
 E em seguida executar:
 
 expo install react-native-gesture-handler react-native-reanimated
+
+
+2 - Add axios para fazer comunicação com a api
+
+yarn add axios 
